@@ -1,64 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Big lemon</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+ 
+    .carousel {
+      background-color: #768705; /* Dark background color */
+    }
+    .carousel-item {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      position: relative;
+    }
+    .carousel-item.active {
+      display: flex;
+    }
+    .carousel-item img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .carousel-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .carousel-caption {
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .nav-link{
+        color: #474842;
+        font-size:large;
+    }
+    body{
+        background-color: #deff08; /* Dark background color */
+    }
+    .custom-container {
+    background-color: #f8f9fa; /* Optional background color */
+    height: 199px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin-bottom: 30px;
+  }
+  .follow-link {
+    color: #ffffff; /* Change to the desired color */
+  }
+  .btn-custom {
+    background-color: #deff08; /* Yellow color */
+    color: white; /* Text color */
+    border-color: #deff08; /* Border color */
+    color:#474842
+  }
+  .btn-custom:hover {
+    background-color: #768705; /* Darker yellow on hover */
+    border-color: #e0a800;
+  }
+
+  </style>
 </head>
+
 <body>
- <div class="menue">   
-    <h1 id="Indexh1">Big lemon menue</h1>
-    <ul>
-        <li>
-            <div id="chicken">
-            <h3>Chicken Biryani</h3>
-            <img src="biryani.jpg" alt="chicken biryani" >
-            <p>Basmati rice biryani with nicely seasoned temder and jucy Chicken with beautiful indian spices</p>
-            </div>
-        </li>
-        <li>
-            <h3>
-                Chicken swarma
-            </h3>
-            <img src="swarma.png" alt="chicken swarme" width="280" height="200">
-            <p>shreded seasoned jucy chicken slowly rosted on fire served with nice peta breade and garlic mayo</p>
-        </li>
-    </ul>
- </div>
-    <br>
-    <style>
-        table ,th,td{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
-    <table>
-        <!--represent table row  -->
-         <tr>
-            <th> 
-                Dishes
-            </th>
-            <th>
-                prices
-            </th>
-        </tr>
-        <tr>
-            <td>Chicken biryani </td>
-            <td>200 RS </td>
-        </tr>
-        <tr>
-            <td>Chicken swarma </td>
-            <td>100 RS </td>
-        </tr>
-    </table>
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="index.html">
+        <img src="lemon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Big lemon
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">&#127968;Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">&#9776 menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="career.html">&#128188 Career</a>
+          </li>    
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <br>
-    <a href="location.html" id="locationHyper"><b>visit now</a>
+<!-- Preload Images -->
+<div style="display: none;">
+  <img src="swarma.png" alt="Preload">
+  <img src="biryani.jpg" alt="Preload">
+  <img src="kabab.jpg" alt="Best in the west">
+</div>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+        <img src="kabab.jpg" alt="Best in the west">
+        <div class="overlay"></div>
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>We had such a great time in LA!</p>
+        </div>
+      </div>
+
+    <div class="carousel-item ">
+      <img src="swarma.png" alt="Best in the west">
+      <div class="overlay"></div>
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>We had such a great time in LA!</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="biryani.jpg" alt="biryani">
+      <div class="overlay"></div>
+      <div class="carousel-caption">
+        <h2>Biryani</h2>
+        <p>Taste the best biryani possible</p>
+      </div> 
+    </div>
+
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container-fluid mt-3 text-center custom-container">
+  <h3>Welcome to the Big Lemon</h3>
+  <p>Please try today's Special. For prices, you can check out our menu.</p>
+  <a href="menu.html" class="btn btn-custom">Menu</a>
+</div>
 
 
-    <br>
-    <a href="contact.html"><b> Contact us</b></a>
-    
+<footer style="background-color: #768705; color: white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Address</h5>
+        <p>123 Example Street<br>City, State ZIP</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="follow-link"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" class="follow-link"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" class="follow-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>Phone: (123) 456-7890<br>Email: contact@example.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
