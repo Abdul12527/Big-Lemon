@@ -1,6 +1,7 @@
 # Restaurant Menu Website
 
 Welcome to the **Big LemonRestaurant Menu Website** project! This is a simple yet elegantly designed responsive website built using HTML, CSS, and Bootstrap. The project adheres to W3C standards to ensure a smooth and user-friendly experience. The website consists of three main pages: Home, Menu, and Career.
+you can chakout the website on <a href="[doc:introduction](https://abdul12527.github.io/Big-Lemon/)" target="_blank">Big-lemon</a>
 
 ## Table of Contents
 
